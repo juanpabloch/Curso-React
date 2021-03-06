@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inputs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Tipos de Inputs</h1>
+    </header>
+    <article>
+        <table>
+            <tr>
+                <td class="tipo">type="text"</td>
+                <td class="ej">
+                    <input type="text" id="firstName" placeholder="Ingresar Nombre">
+                </td>
+                <td class="info">Se utiliza para crear un campo de entrada de texto. Podemos colocar un atributo value=" " 
+                    que va a ser el valor inicial del campo.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="password"</td>
+                <td class="ej">
+                    <input type="password" name="pass" placeholder="Ingresar Contraseña" minlength="8" >
+                </td>
+                <td class="info">Los campos de contraseñas son muy similares a los de texto, con la diferencia de que su valor es
+                     ocultado (se reemplazan los caracteres con un símbolo) y no se permite copiarlo al portapapeles. Esto actúa 
+                     como una medida de seguridad que previene que el valor sea conocido por cualquier persona que no sea el 
+                     usuario.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="email"</td>
+                <td class="ej">
+                    <label for="email"> Correo electrónico </label> 
+                    <input type="email" name="email" id="email" placeholder="usuario@servidor.com"> 
+                </td>
+                <td class="info">Representa un campo para ingresar emails, si colocamos el atributo multiple 
+                    podemos ingresar varias direcciones de email separadas por coma (,).</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="url"</td>
+                <td class="ej">
+                    <label for="sitioweb">Sitio web</label> 
+	                <input type="url" name="sitioweb" id="sitioweb" placeholder="tienes un sitio web?">
+                </td>
+                <td class="info">Se utiliza para ingresar direcciones url.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="checkbox"</td>
+                <td class="ej">
+                    <p>Intereses:</p> 
+                    <label><input type="checkbox" name="cbox-autos" value="gusta"> Autos </label> 
+                    <label><input type="checkbox" name="cbox-deportes" value="gusta"> Deportes </label> 
+                    <label><input type="checkbox" name="cbox-videojuegos" value="gusta"> Videojuegos </label> 
+                </td>
+                <td class="info">Representa un control de dos estados que permite a los usuarios marcarlo como seleccionado o 
+                    deseleccionado. El estado de una casilla de verificación es decidido por el atributo checked (si está presente, la 
+                    casilla está marcada) Pero cuando el formulario es enviado, lo que se envía no es su estado de selección, sino el par 
+                    nombre/valor. El valor es enviado sólo si la casilla está seleccionada. Se utiliza para preguntas que pueden tener más 
+                    de una respuesta, debemos definir el valor (value) que es el valor que se envía, si no lo definimos por defecto es on 
+                    (nos sirve para un botón tipo switch).</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="radio"</td>
+                <td class="ej">
+                    <p>Selecciona un curso:</p>  
+                    <label><input type="radio" name="curso" value="javascript" checked> JavaScript </label>  
+                    <label><input type="radio" name="curso" value="python"> Python </label> 
+                    <label><input type="radio" name="curso" value="java"> Java </label> 
+                </td>
+                <td class="info">Se utilizan para dar varias opciones al usuario y este debe seleccionar una sola. Cada uno de los botones 
+                    radio pueden estar con sus propios elementos label, (cuando colocamos un elemento input adentro de un elemento label se 
+                    asocian automáticamente). Los botones radio relacionados deben tener el mismo atributo name para crear un grupo y que la 
+                    selección sea una. Debemos colocar un atributo value porque cuando el formulario es enviado solo la opción seleccionada es 
+                    enviada junto con el valor (value) del control. Value debe ser único en cada opción.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="hidden"</td>
+                <td class="ej">
+                    <input type="hidden">
+                </td>
+                <td class="info">Es un campo que no es visible y no se puede modificar por el usuario, pero su valor es enviado al servidor. 
+                    Los controles ocultos son útiles para enviar datos al servidor definidos por el autor, basados o no en la interacción con 
+                    el usuario. se utiliza para detectar bots que completan formularios de forma automática validando el campo con 
+                    javascript.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="submit"</td>
+                <td class="ej">
+                    <input type="submit" value="Enviar" class="btn"> 
+                </td>
+                <td class="info">Envía el formulario al que pertenece, el atributo value="" es el nombre que muestra el boton.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="button"</td>
+                <td class="ej">
+                    <input type="button" id="boton" value="Mensaje"  onclick="alert('Hola como estas?')" class="btn">
+                </td>
+                <td class="info">Sin funcionalidad específica, representa un botón sin una acción predefinida asociada. 
+                    La funcionalidad se la podemos dar con javascript.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="reset"</td>
+                <td class="ej">
+                    <form>
+                        <input type="text" name="texto" id="texto" value="texto de prueba">
+                        <input type="reset" id="reset" value="Restaurar" class="btn">
+                    </form> 
+                </td>
+                <td class="info">Botón que restaura los contenidos de un formulario a sus valores predeterminados.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="file"</td>
+                <td class="ej">
+                    <form method="POST" enctype="multipart/form-data"> 
+                        <label for=”imgPerfil”>Imagen de Perfil</label> 
+                        <input type="file" id="imgPerfil" accept=".jpg,.jpeg">
+                    </form> 
+                </td>
+                <td class="info">Control que permite al usuario seleccionar y enviar un archivo. Se puede usar el atributo accept 
+                    para definir los tipos de archivo que el control podrá seleccionar podemos pasar varias extensiones separadas 
+                    por una coma (,) (imágenes, documentos, archivos de todo tipo). <span class="imp">Importante</span> al utilizar este input en un formulario 
+                    debemos incluir dentro de la etiqueta "form" el atributo enctype="multipart/form-data" este codigo nos permite 
+                    enviar archivos a través de un formulario. </td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="image"</td>
+                <td class="ej">
+                    <input type="image" name="botonEnvio" src="http://pngimg.com/uploads/buttons/buttons_PNG24.png" alt="Enviar formulario" width="60px">
+                </td>
+                <td class="info">Es un boton grafico que sirve para enviar el formulario (submit), se debe usar el atributo src para definir 
+                    el origen de la imagen y el atributo alt para definir un texto alternativo. Se puede usar los atributos height y width para 
+                    definir el tamaño de la imagen en píxeles.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="color"</td>
+                <td class="ej">
+                    <label for="color">Selecionar color</label>   
+                    <input type=color id="color" name=”color”>
+                </td>
+                <td class="info">Es un control que permite al usuario cambiar su valor de manera gráfica para seleccionar un color específico.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="range"</td>
+                <td class="ej">
+                    <label for=“numero”>Rango del 1 al 10</label> 
+                    <input type="range" name="numero" id=”numero” min="0" max="10"> 
+                </td>
+                <td class="info">Se utiliza para seleccionar un numero dentro de un rango de números, en los navegadores los campos de rango 
+                    son representados por algo similar a un deslizador, con los atributos min y max podemos personalizar el rango de números. 
+                    Tenemos otro atributo step que limita la selección de números (step=”10” la selección de range va a ser de 10 en 10).</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="number"</td>
+                <td class="ej">
+                    <label for=“edad”>Edad</label> 
+	                <input type="number" name="edad" id="edad">
+                </td>
+                <td class="info">Se utiliza para ingresar un número, se pueden colocar atributos max y min para limitar la elección.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="tel"</td>
+                <td class="ej">
+                    <input type="tel" name="telefono" placeholder="(Código de área) Número">
+                </td>
+                <td class="info">Se utiliza para ingresar un número telefónico, podemos utilizar el atributo pattern para realizar validaciones 
+                    o restringir las opciones.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="date"</td>
+                <td class="ej">
+                    <label for=”fecha”>Fecha de nacimiento</label>	    
+                    <input type="date" name="fecha" id=”fecha”>
+                </td>
+                <td class="info">Se utiliza para ingresar una fecha. En los navegadores modernos los campos de fecha son representados de 
+                    manera gráfica (calendario).</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="datetime-local"</td>
+                <td class="ej">
+                    <label for=”fechaVuelo”>Fecha Vuelo</label> 
+	                <input type="datetime-local" name="fechaVuelo" id=”fechaVuelo”>
+                </td>
+                <td class="info">Se utiliza para ingresar una fecha, pero esta incluye el año, mes, día y hora.</td>
+            </tr>
+
+            <tr>
+                <td class="tipo">type="time"</td>
+                <td class="ej">
+                    <label for=”horaLlegada”>Hora de Llegada </label> 
+	                <input type="time" name="horaLlegada " id=”horaLlegada”> 
+                </td>
+                <td class="info">Se utiliza para ingresar una hora en especial, podemos utilizar los atributos min y max para restringir la selección.</td>
+            </tr>
+
+        </table>
+    </article>
+    <article>
+        <h2>Atributos</h2> 
+        <h4>los atributos los podemos utilizar dentro de los inputs para restringir 
+            o ayudar al usuario a la hora de llenar un formulario</h4>
+<p>
+    <span class="atributo">name:</span> este asigna un nombre al control (es imprescindible para que el servidor pueda 
+    procesar el formulario). Se utiliza para hacer referencia a los datos del campo después
+    enviar el formulario o hacer referencia al elemento en JavaScript.
+</p> 
+
+<p>
+    <span class="atributo">value:</span> valor inicial, en button y submit value es el nombre que aparece en el botón 
+</p>
+<p>
+    <span class="atributo">disable:</span> Podemos deshabilitar un input para que no funcione. 
+    <input type="text" id="fname" name="fname" disabled>
+</p>
+<p>
+    <span class="atributo">readonly:</span> podemos crear un campo que sea solo lectura y que el usuario no pueda modificar: 
+    <input type="text" id="country" name="country" value="Norway" readonly> 
+</p>
+<p>
+    <span class="atributo">min / max:</span> atributos que nos limitan los valores a ingresar 
+</p>
+<p>
+    <span class="atributo">minlength / maxlength</span>  atributos que limitan la cantidad de caracteres a ingresar 
+</p>
+<p>
+    <span class="atributo">pattern:</span> ayuda estableciendo expresiones regulares que cualquier valor ingresado debe acatar. 
+    Ej: <span>input type="text" name="pass" pattern="[A-Za-z]{3}" title="solo 3 letras" required></span> 
+</p> 
+<p>
+    <span class="atributo">title:</span> es responsable de proveer una explicación acerca de las reglas que aplican en el campo. 
+    Los navegadores pueden usar esta información para componer el mensaje de error que se muestra al 
+    usuario luego de un intento fallido de envío. 
+</p>
+<p>
+    <span class="atributo">placeholder:</span> desplega texto dentro del cuadro donde se va a ingresar texto antes de que el usuario 
+    escriba algo, esto se llama placeholder es texto que puede servir para guiar al usuario de lo que debe 
+    ingresar, se puede crear de la siguiente manera: <span>input type="text" placeholder="ingresar texto"></span> 
+</p>
+<p>
+    <span class="atributo">required:</span> se obliga al usuario a completar el campo antes de enviar el formulario. Se puede requerir 
+    datos específicos en un formulario y que el usuario no pueda enviar el formulario hasta que haya completado 
+    los campos de entrada. Ej: <span>input type="text" required></span> 
+</p>
+    </article>
+</body>
+</html>
