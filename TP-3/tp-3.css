@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #00ff00;
+}
+
+.caja{
+    background-color: yellow;
+    width: 700px;
+    height: 700px;
+    margin: 75px 0 0 350px;
+    padding: 100px;
+}
+
+.flor{
+    width: 500px;
+    height: 500px;
+    fill: red;
+}
