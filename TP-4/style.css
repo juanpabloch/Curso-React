@@ -18,7 +18,8 @@ body{
 
 header{
    position: sticky;
-    top: 5px;
+   top: -2px;
+   background-color: #fff;
 }
 
 .container{
