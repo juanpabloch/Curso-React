@@ -39,6 +39,8 @@ img{
 
 /* nav */
 .navegador{
+    position: sticky;
+    top: 5px;
     height: 100px;
     display: flex;
     justify-content: space-between;
