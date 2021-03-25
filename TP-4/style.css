@@ -16,6 +16,12 @@ body{
     width: 100%;
 }
 
+header{
+   position: sticky;
+   top: -2px;
+   background-color: #fff;
+}
+
 .container{
     max-width: 1100px;
     margin: 0 auto;
@@ -176,7 +182,7 @@ footer{
     color: rgb(218, 218, 218);
 }
     footer h2{
-        font-size: 2.6em;
+        font-size: 2.1em;
         letter-spacing: 1px;
         margin-bottom: 5px;
     }
