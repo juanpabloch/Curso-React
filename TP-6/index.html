@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <!-- pagina principal -->
+        <div id="principal" class="pagina" data-pagina="principal">
+          <header>
+            <h1>mercado<span>virtual</span></h1>
+            <div class="flex">
+                <button class="btn cart-btn"><img src="https://www.svgrepo.com/show/97358/cart.svg"></button>
+                <div class="circulo"><span id="cantidad-carrito"></span></div>
+            </div>
+          </header>
+          
+          <section id="lista">
+          </section>
+        </div>
+       
+       
+         <!-- vista carrito -->
+        <div id="shopCart" class="pagina" data-pagina="shopCart">
+            <header>
+                <h1>shop<span>Cart</span></h1>
+                <button class="btn atras-btn">Volver</button>
+            </header>
+
+          <div class="lista-cart">
+
+          </div>
+          
+            <hr />
+            <div class="comprar">
+              <button id="comprar-btn">Comprar</button>
+              <div>Total: <span id="total"></span></div>
+            </div>
+            
+        </div>
+        
+        
+          <!-- mensaje exito -->
+        <div id="exito" class="pagina" data-pagina="exito">
+
+        </div>
+        
+        
+       <script src="productos.js"></script>
+</body>
+</html>

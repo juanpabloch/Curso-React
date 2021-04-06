@@ -1,0 +1,339 @@
+:root{
+    --fuente: 'Montserrat', sans-serif;
+    --background-color: #ef476f;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #f0f0f0;
+    font-family: var(--fuente);
+  }
+  
+  button{
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+  }
+
+  #principal{
+    display: block;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+    padding: 0 55px;
+  }
+  
+  .flex{
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+  }
+
+  .cart-btn{
+    width: 45px;
+    height: 45px;
+    background: none;
+    border: none;
+  }
+
+  .circulo{
+    background-color: #ef476f;
+    border-radius: 50%;
+    width: 28px;
+    height: 26px;
+    padding: 2px;
+    text-align: center;
+    color: #ffffff;
+  }
+  #cantidad-carrito{
+    font-family: monospace;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  
+  h1{
+    text-align: center;
+    font-size: 3.2rem;
+    letter-spacing: 3px;
+  }
+    h1 span{
+        font-weight: 300;
+    }
+  
+  .img-contain{
+    max-width: 250px;
+    height: 280px;
+    margin-bottom: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+    .imagen{
+      max-width: 100%;
+      max-height: 200px;
+    }
+  
+  
+  #lista{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .producto{
+      position: relative;
+        cursor: pointer;
+        width: 250px;
+        padding: 10px 10px 0 10px;
+        margin: 8px;
+        overflow: hidden;
+        border-radius: 0 0 12px 0;
+        box-shadow: 1px 2px 10px -6px #000;
+        background-color: #ffffff;
+  }
+    .producto:hover .addBtn{
+        right: -40px;
+    }
+
+    .addBtn{
+        position: relative;
+        right: -199px;
+        background-color: #ef476f;
+        border-radius: 12px 0 0 0;
+        padding: 7px 18px 7px 12px;
+        color: #073b4c;
+        transition: all 0.3s ease;
+        
+    }
+        .addBtn:hover{
+            background-color: #ee5e80;
+            color: #fff;
+        }
+        
+        .addBtn span{
+            font-size: 1.6rem;
+            margin-right: 5px;
+        }
+  .info{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+    .info h2{
+      font-weight: 300;
+      text-transform: capitalize;
+      font-size: 1.2rem;
+    }
+    .info p{
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  
+  
+  /* shopcart */
+  #shopCart{
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+    #shopCart hr{
+        margin: 20px 0;
+    }
+  
+  .comprar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+  }
+  
+  #comprar-btn{ 
+    font-size: 1.8rem;
+    background-color: #ef476f;
+    color: #fff;
+    padding: 5px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+    #comprar-btn:hover{
+        background-color: #f15d80c4;
+    }
+
+  #total{ 
+    font-size: 1.3rem;
+  }
+
+  .img-cart{
+    width: 50px;
+    margin-right: 15px;
+  }
+    .img-cart img{
+        max-height: 70px;
+    }
+  
+  .producto-cart{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-bottom: 10px;
+  }
+  
+  .lista-cart .precio{
+     text-align: left;
+     width: 80px;
+  }
+  .lista-cart .nombre{
+      width: 300px;
+    text-align: left;
+ }
+
+
+  .lista-cart h2{
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      font-weight: 500;
+  }
+  .lista-cart p{
+      font-size: 1.3rem;  
+      letter-spacing: 2px;  
+      max-width: 500px;
+  }
+
+  .lista-cart button{
+      text-align: center;
+      font-size: 1.5rem;
+      color: var(--background-color);
+      padding: 1px 7px;
+      border-radius: 5px;
+  }
+      .lista-cart button:hover{
+          color: #dd0025;
+          background-color: rgba(255, 0, 0, 0.041);
+      }
+
+  .atras-btn{ 
+      font-size: 1.8rem;  
+      letter-spacing: 2px; 
+      transition: all 0.3s ease;
+  }
+      .atras-btn:hover{
+          border-radius: 10px;
+          padding: 2px 15px;
+          background-color: var(--background-color);
+          color: #fff;
+          font-weight: 300;
+      }
+  
+   /* pagina exito */
+   #exito{
+    display: none;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 150px;
+    background: rgb(239,71,111);
+    background: linear-gradient(12deg, rgb(240, 47, 92) 0%, rgba(231,162,178,0.608356721594888) 100%);
+    padding: 80px;
+    border-radius: 15px;
+    color: #f0f0f0;
+  }
+
+    #exito h2{
+        font-size: 2.5rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 50px;
+    }
+    #exito p{
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+
+
+  .disabled{
+      background-color: #f0f0f0;
+  }
+    .disabled:hover{
+      color: #2e4249;
+      background-color: #f0f0f0;
+    }
+
+
+@media (max-width: 600px) {
+    :root{
+        font-size: 14px;
+    }
+
+    #lista{
+        flex-direction: column;
+    }
+
+    .producto:hover .addBtn{
+        right: -60px;
+    }
+
+    /* carrito */
+    #shopCart header{
+        padding: 0 30px;
+    }
+
+    .atras-btn{
+        font-size: 1.5rem;
+    }
+
+    #shopCart h1{
+        font-size: 2.5rem;
+    }
+    .producto-cart{
+        padding: 0 20px;
+    }
+        .producto-cart h2{
+            font-weight: 300;
+        }
+        .lista-cart p{
+            text-align: center;
+        }
+    .comprar{
+        padding: 0 10px;
+    }
+
+
+    /* exito */
+
+    #exito{
+        padding: 30px;
+        height: 100vh;
+        margin-top: 0;
+    }
+        #exito h2{
+            font-size: 2rem;
+            font-weight: 400;
+            margin-top: 80px;
+        }
+        #exito p{
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+}
