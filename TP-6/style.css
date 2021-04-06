@@ -290,6 +290,18 @@
         flex-direction: column;
     }
 
+    header{
+        padding: 0 30px;
+    }
+
+    #principal h1{
+        font-size: 1.6rem;
+    }
+
+    .cart-btn{
+        width: 35px;
+    }
+
     .producto:hover .addBtn{
         right: -60px;
     }
