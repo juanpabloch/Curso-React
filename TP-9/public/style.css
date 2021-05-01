@@ -22,6 +22,7 @@ body::after{
     right: 40%;
     border-radius: 50%;
     z-index: -1;
+    opacity: .8;
 }
 
 .container-index{
@@ -262,5 +263,10 @@ footer{
     }
     .volver{
         text-align: center;
+    }
+
+    footer{
+        letter-spacing: 1px;
+        flex-direction: column;
     }
 }
