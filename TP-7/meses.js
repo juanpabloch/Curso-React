@@ -14,10 +14,6 @@ for (let i = 0; i < meses.length; i++) {
     if(diasDelMes[i] === 30){
         listaMeses30.push(meses[i]);
     }
-}
-
-
-for (let i = 0; i < meses.length; i++) {
     if(diasDelMes[i] === 31){
         listaMeses31.push(meses[i]);
     }
@@ -35,9 +31,6 @@ const meses30 = document.querySelector("#meses30");
 const meses31 = document.querySelector("#meses31");
 
 
-desplegarMeses();
-
-
 function desplegarMeses(){    
     addItem(listaMeses30, meses30);
     addItem(listaMeses31, meses31);
@@ -47,22 +40,22 @@ function desplegarMeses(){
 
     let i = 0;
 
-    let draw = setInterval(() => {
+    const draw = setInterval(() => {
         arrayMeses30[i].classList.add("center");
         i++;
-        if (i > listaMeses30.length-1) {
+        if (i === listaMeses30.length) {
             clearInterval(draw);
         }
     }, 1000);
 
 
-    let timeout = (listaMeses30.length * 1000) + 500;
+    const timeout = (listaMeses30.length * 1000) + 500;
 
 
     setTimeout(() => {
-        let j = 0
+        let j = 0;
 
-        let draw1 = setInterval(() => {
+        const draw1 = setInterval(() => {
             arrayMeses31[j].classList.add("center");
             j++;
             if (j > listaMeses31.length-1) {
@@ -93,3 +86,5 @@ function mostarMensaje(){
 function reset(){
     location.reload();
 }
+
+desplegarMeses();
