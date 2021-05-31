@@ -1,6 +1,19 @@
 const express = require('express');
 const app = express();
 
+const session = require('express-session');
+const MysqlStore = require('express-mysql-session')(session);
+
+const options = {
+    host: 'localhost',  
+    user: 'root',  
+    password:'',  
+    port: 3306,  
+    database: 'basquet'
+}
+
+const sessionStore = new MysqlStore(options)
+
 const port = process.env.PORT || 3000;
 
 app.use(express.static(`${__dirname}/public`));
@@ -8,13 +21,29 @@ app.use(express.static(`${__dirname}/public`));
 app.use(express.urlencoded());
 app.use(express.json());
 
+//sessions
+app.use(session({
+    key: 'usuario',
+    secret: 'clave-secreta',
+    resave: false,
+    saveUninitialized: false,
+    proxy: true,
+    cookie: {
+        maxAge: 86400000,
+        sameSite: true
+    },
+    store: sessionStore,
+}))
+
+
 //rutas
 const equipoRuta = require('./routes/rutaEquipoApi');
 const jugadoresRuta = require('./routes/rutaJugadoresApi');
 const webRutas = require('./routes/rutaWeb');
 
-app.use('/api/equipos', equipoRuta);
-app.use('/api/jugadores', jugadoresRuta);
+const validaciones = require('./validacion/validaciones')
+app.use('/api/equipos', validaciones.validarUsuario, equipoRuta);
+app.use('/api/jugadores',validaciones.validarUsuario, jugadoresRuta);
 app.use('/', webRutas);
 
 

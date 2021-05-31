@@ -230,7 +230,8 @@ form button, [type="submit"]{
 
 #equipos button{
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    text-transform: uppercase;
     background: transparent;
     border: none;
     padding: 5px;
@@ -306,6 +307,39 @@ h1{
     display: none;
 }
 
+/*------------ login -------------*/
+#formulario-login{
+    margin: 0 auto;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+    #formulario-login input[type='text'], input[type='password']{
+        width: 100%;
+        padding: 13px;
+        margin-bottom: 15px;
+    }
+    #formulario-login a{
+        color: #ECF0F1;
+        font-size: 2rem;
+        margin-left: 20px;
+    }
+
+    #formulario-login h1{
+        font-size: 2rem;
+    }
+
+    .errores-registro li{
+        color: rgb(255, 30, 53);
+        font-size: 1.5rem;
+        margin: 0 auto;
+        max-width: 350px;
+        list-style: disc;
+    }
+
 @media screen and (max-width: 1024px) { /* Specific to this particular image */
     img.bg {
       left: 50%;
@@ -343,7 +377,7 @@ h1{
 
 
     .container h1{
-        font-size: 7rem;
+        font-size: 6rem;
         margin-bottom: 80px;
         display: flex;
         flex-direction: column;
@@ -380,7 +414,7 @@ h1{
     }
 
     .container h1{
-        font-size: 6rem;
+        font-size: 4rem;
     }
 
     .inscripcion a{

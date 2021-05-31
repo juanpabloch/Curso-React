@@ -2,11 +2,11 @@ const mysql = require('mysql');
 const util = require('util');
 
 const connection = mysql.createConnection({
-    host: 'freedb.tech',
-    user: 'freedbtech_juanpabloch',
-    password: '32620420jpc',
-    port: 3306,
-    database: 'freedbtech_utnTpExpress'
+    host: 'localhost',  
+    user: 'root',  
+    password:'',  
+    port: 3306,  
+    database: 'basquet'
 })
 
 connection.connect((error)=>{

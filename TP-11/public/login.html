@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Torneo Basquet</title>
+    <title>Torneo Basquet | login</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;900&display=swap" rel="stylesheet">
@@ -23,30 +23,24 @@
         </nav>
     </header>
 
-    <div class="hero flex mb-20">
-        <h1 class="hero-titulo">jugadores</h1>
-    </div>
-    <div class="listaJugadores">
-        <div class="equipo">
-            
-            <table>
-                <thead>
-                    <tr>
-                        <th>&nbsp;</th>
-                        <th>nombre</th>
-                        <th>email</th>
-                        <th>equipo</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    
-                </tbody>
-            </table>
-            
-        </div>
+    <div class="container">
+        <h1>login</h1>
+        <form action="/login" method="post" id="formulario-login">
+            <input type="text" name="userName" id="userName" placeholder="Nombre de usuario">
+            <input type="password" name="password" id="password" placeholder="password">
+            <div class="botones">
+                <input type="submit" value="Login">
+                <a href="/registrate">Registrate</a>
+            </div>
+        </form>
     </div>
 
-    <script src="js/listaJugadores.js"></script>
-    <script src="js/logout.js"></script>
+    <div class="errores">
+        <ul>
+            
+        </ul>
+    </div>
+
+    
 </body>
 </html>
