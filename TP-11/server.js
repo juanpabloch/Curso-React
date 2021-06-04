@@ -42,6 +42,7 @@ const jugadoresRuta = require('./routes/rutaJugadoresApi');
 const webRutas = require('./routes/rutaWeb');
 
 const validaciones = require('./validacion/validaciones')
+
 app.use('/api/equipos', validaciones.validarUsuario, equipoRuta);
 app.use('/api/jugadores',validaciones.validarUsuario, jugadoresRuta);
 app.use('/', webRutas);
