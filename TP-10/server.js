@@ -8,11 +8,11 @@ const myConnection = require('express-myconnection');
 
 //mysql connection
 const connOptions = {
-    host: 'freedb.tech',
-    user: 'freedbtech_juanpabloch',
-    password: '32620420jpc',
-    port: 3306,
-    database: 'freedbtech_utnTpExpress',
+    host: 'localhost',  
+    user: 'root',  
+    password:'',  
+    port: 3306,  
+    database: 'inscripcion'
 }
 app.use(myConnection(mysql, connOptions, 'single'))
 
