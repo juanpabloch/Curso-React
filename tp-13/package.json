@@ -2,6 +2,7 @@
   "name": "tp-13",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://juanpabloch.github.io/Curso-React/tp-13",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
