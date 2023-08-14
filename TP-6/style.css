@@ -49,6 +49,10 @@
     border: none;
   }
 
+  .cart-btn img{
+    width: 90%;
+  }
+
   .circulo{
     background-color: #ef476f;
     border-radius: 50%;
